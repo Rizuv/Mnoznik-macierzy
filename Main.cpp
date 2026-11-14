@@ -73,11 +73,11 @@ void debug_matrix(std::vector<std::vector<double>>& v){
 
 std::vector<std::vector<double>> multiply(std::vector<std::vector<double>>& m1,std::vector<std::vector<double>>& m2){
     std::vector<std::vector<double>> ans;
-    for(int i = 0; i < m1[0].size(); ++i){
+    for(int i = 0; i < m1.size(); ++i){
         std::vector<double> row;
-        for(int j = 0; j < m2.size(); ++j){
+        for(int j = 0; j < m2[0].size(); ++j){
             double cell = 0;
-            for(int k = 0; k < m1[0].size(); ++k){
+            for(int k = 0; k < m1.size(); ++k){
                 cell += m1[i][k]*m2[k][j];
             }
             row.push_back(cell);
@@ -86,6 +86,7 @@ std::vector<std::vector<double>> multiply(std::vector<std::vector<double>>& m1,s
     }
     return ans;
 }
+
 
 int main(){
 
