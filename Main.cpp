@@ -87,7 +87,6 @@ std::vector<std::vector<double>> multiply(std::vector<std::vector<double>>& m1,s
     return ans;
 }
 
-
 int main(){
 
     std::cout << "Podaj rozmiar macierzy 1\n";
